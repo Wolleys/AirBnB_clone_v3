@@ -21,7 +21,7 @@ def close_store():
 
 
 @app.errorhandler(404)
-def page_not_found(error):
+def page_not_found():
     """ Loads a custom 404 page not found """
     return make_response(jsonify({"error": "Not found"}), 404)
 
