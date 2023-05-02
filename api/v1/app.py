@@ -18,10 +18,10 @@ cors = CORS(app, resources={r"/api/*": {"origins": "0.0.0.0"}})
 def close_store():
     """a method to close storage"""
     storage.close()
-    
+
 
 @app.errorhandler(404)
-def page_not_foun(error):
+def page_not_found(error):
     """ Loads a custom 404 page not found """
     return make_response(jsonify({"error": "Not found"}), 404)
 
